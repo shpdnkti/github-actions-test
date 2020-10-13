@@ -19,7 +19,7 @@ jobs:
                     - name: Build the tagged Docker image
                       run: docker build . --file Dockerfile --tag kamwailung/angular-cli:${{steps.vars.outputs.tag}}
                     - name: Push the tagged Docker image
-                      run: docker pushkamwailung/angular-cli:${{steps.vars.outputs.tag}}
+                      run: docker push kamwailung/angular-cli:${{steps.vars.outputs.tag}}
                     - name: Build the latest Docker image
                       run: docker build . --file Dockerfile --tag kamwailung/angular-cli:latest
                     - name: Push the latest Docker image
